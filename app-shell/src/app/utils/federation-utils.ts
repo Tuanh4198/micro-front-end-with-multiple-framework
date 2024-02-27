@@ -6,9 +6,13 @@ type Container = {
   get(module: string): Factory;
 };
 
+// là các biến được tạo ra bởi Webpack khi bạn sử dụng tính năng Module Federation. 
+// Tính năng này cho phép bạn chia sẻ module giữa các ứng dụng Webpack khác nhau 
+// hoặc giữa các micro frontends.
 declare const __webpack_init_sharing__: (shareScope: string) => Promise<void>;
 declare const __webpack_share_scopes__: { default: Scope };
 
+// check xem module đó đã được load hay chưa khi init (chưa thì load thêm, có rồi thì thôi)
 const moduleMap: Record<string, any> = {};
 
 function loadRemoteEntry(remoteEntry: string): Promise<void> {
