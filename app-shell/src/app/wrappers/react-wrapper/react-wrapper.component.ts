@@ -1,6 +1,5 @@
 import { Component, ElementRef, Input } from '@angular/core';
 import { createElement } from 'react';
-// @ts-ignore
 import { Root, createRoot } from 'react-dom/client';
 
 @Component({

@@ -1,5 +1,5 @@
 {
-  "name": "viblo-module-federation",
+  "name": "module-federation",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",

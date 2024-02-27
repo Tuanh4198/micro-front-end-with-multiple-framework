@@ -38,30 +38,32 @@ const remoteModules = [
 })
 export class AppService {
   loggedUser: { username: string; password: string } | null = null;
-  authorized_modules: typeof remoteModules = []
+  authorized_modules: typeof remoteModules = [...remoteModules]
 
   login(username: string, password: string) {
     const user = users.find(
       (item) => item.username === username && item.password === password
     );
 
-    if (!user) return false;
+    this.authorized_modules = remoteModules
 
-    this.loggedUser = user;
+    // if (!user) return false;
 
-    switch(user.username) {
-      case 'user3': {
-        this.authorized_modules = remoteModules // all modules
-        break
-      }
-      case 'user2': {
-        this.authorized_modules = remoteModules.slice(0, 2) // takes first 2
-        break
-      }
-      default: {
-        this.authorized_modules = [remoteModules[0]] // take first
-      }
-    }
+    // this.loggedUser = user;
+
+    // switch(user.username) {
+    //   case 'user3': {
+    //     this.authorized_modules = remoteModules // all modules
+    //     break
+    //   }
+    //   case 'user2': {
+    //     this.authorized_modules = remoteModules.slice(0, 2) // takes first 2
+    //     break
+    //   }
+    //   default: {
+    //     this.authorized_modules = [remoteModules[0]] // take first
+    //   }
+    // }
 
     return true;
   }

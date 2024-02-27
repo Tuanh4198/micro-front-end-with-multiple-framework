@@ -9,6 +9,9 @@ import { MainComponent } from './main/main.component';
 import { ReactWrapperComponent } from './wrappers/react-wrapper/react-wrapper.component';
 import { VueWrapperComponent } from './wrappers/vue-wrapper/vue-wrapper.component';
 import { AngularWrapperComponent } from './wrappers/angular-wrapper/angular-wrapper.component';
+import { ReactPageComponent } from 'src/app/reactPage/react-page.component';
+import { VuePageComponent } from 'src/app/vuePage/vue-page.component';
+import { AngularPageComponent } from 'src/app/angularPage/angular-page.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,10 @@ import { AngularWrapperComponent } from './wrappers/angular-wrapper/angular-wrap
     MainComponent,
     ReactWrapperComponent,
     VueWrapperComponent,
-    AngularWrapperComponent
+    AngularWrapperComponent,
+    ReactPageComponent,
+    VuePageComponent,
+    AngularPageComponent
   ],
   imports: [
     BrowserModule,

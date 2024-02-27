@@ -1,5 +1,12 @@
 :host {
   display: block;
-  border: solid 2px rgb(183, 0, 255);
+  border: solid 2px black;
   padding: 10px;
+}
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
 }

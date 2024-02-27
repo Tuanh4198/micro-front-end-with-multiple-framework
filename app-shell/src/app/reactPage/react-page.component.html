@@ -1,0 +1,5 @@
+<div class="container">
+  <ng-container *ngIf="loaders.length > 0">
+    <app-react-wrapper [component]="loaders[0]?.component"></app-react-wrapper>
+  </ng-container>
+</div>

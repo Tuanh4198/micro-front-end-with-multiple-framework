@@ -1,8 +1,19 @@
-Login as: {{ appService.loggedUser?.username }}
+<!-- Login as: {{ appService.loggedUser?.username }}
 <button (click)="logout()">Logout</button>
-<hr />
+<hr /> -->
 <div class="container">
-  <h1>App shell</h1>
+  <h1>Main App</h1>
+  
+  <nav>
+    <ul>
+      <li><a routerLink="/react">React</a></li>
+      <li><a routerLink="/vue">Vue</a></li>
+      <li><a routerLink="/angular">Angular</a></li>
+    </ul>
+  </nav>
+
+  <h3>========= Show all service =========</h3>
+
   <ng-container #comp *ngFor="let item of loaders" [ngSwitch]="item.framework">
     <app-react-wrapper
       *ngSwitchCase="'react'"

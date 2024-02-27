@@ -1,0 +1,5 @@
+<div class="container">
+  <ng-container *ngIf="loaders.length > 0">
+    <app-vue-wrapper [component]="loaders[0]?.component"></app-vue-wrapper>
+  </ng-container>
+</div>
