@@ -27,7 +27,7 @@ const remoteModules = [
     exposedModule: 'AngularAppLoader',
   },
   {
-    remoteEntry: 'http://localhost:3002/remoteEntry.js',
+    remoteEntry: 'http://localhost/remoteEntry.js',
     remoteName: 'react_app',
     exposedModule: 'ReactAppLoader',
   },

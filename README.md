@@ -19,3 +19,10 @@ login:
 - user1-user1 => view 1 service
 - user2-user2 => view 2 service
 - user3-user3 => view 3 service
+
+
+run proj react with NGINX:
+Pull image NGINX from docker hub
+run yarn build project
+start nginx server
+run: docker run -p 80:80 -v /path/to/your/project/nginx.conf:/etc/nginx/nginx.conf -v /path/to/your/react/app/build:/usr/share/nginx/html nginx
